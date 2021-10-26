@@ -41,6 +41,11 @@ header {
   position: relative;
 }
 
+.card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
 .card h2 {
   font-size: 22px;
   font-weight: 600;
