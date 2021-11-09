@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import FeedbackList from './components/FeedbackList'
 import FeedbackStats from './components/FeedbackStats'
@@ -13,13 +13,21 @@ function App() {
       <Router>
         <Header />
         <div className='container'>
-          <Route exact path='/'>
-            <FeedbackForm />
-            <FeedbackStats />
-            <FeedbackList />
-          </Route>
+          <Routes>
+            <Route
+              exact
+              path='/'
+              element={
+                <>
+                  <FeedbackForm />
+                  <FeedbackStats />
+                  <FeedbackList />
+                </>
+              }
+            ></Route>
 
-          <Route path='/about' component={AboutPage} />
+            <Route path='/about' element={<AboutPage />} />
+          </Routes>
 
           <AboutIconLink />
         </div>
