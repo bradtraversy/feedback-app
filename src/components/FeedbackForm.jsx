@@ -21,19 +21,22 @@ function FeedbackForm() {
     }
   }, [feedbackEdit])
 
-  const handleTextChange = (e) => {
-    if (text === '') {
+  /* NOTE: This should be checking input value not state as state won't be the updated value until the next render of the component
+   */
+  // 👈  get the value
+  const handleTextChange = ({ target: { value } }) => {
+    if (value === '') {
       setBtnDisabled(true)
       setMessage(null)
-    } else if (text !== '' && text.trim().length <= 10) {
+      // 👈 check for less than
+    } else if (value !== '' && value.trim().length < 10) {
       setMessage('Text must be at least 10 characters')
       setBtnDisabled(true)
     } else {
       setMessage(null)
       setBtnDisabled(false)
     }
-
-    setText(e.target.value)
+    setText(value)
   }
 
   const handleSubmit = (e) => {
@@ -54,11 +57,12 @@ function FeedbackForm() {
     }
   }
 
+  // NOTE: pass selected to RatingSelect so we don't need local duplicate state
   return (
     <Card>
       <form onSubmit={handleSubmit}>
         <h2>How would you rate your service with us?</h2>
-        <RatingSelect select={(rating) => setRating(rating)} />
+        <RatingSelect select={setRating} selected={rating} />
         <div className='input-group'>
           <input
             onChange={handleTextChange}

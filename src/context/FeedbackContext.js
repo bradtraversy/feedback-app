@@ -62,6 +62,12 @@ export const FeedbackProvider = ({ children }) => {
     setFeedback(
       feedback.map((item) => (item.id === id ? { ...item, ...data } : item))
     )
+    // FIX: this fixes being able to add a feedback after editing
+    // credit to Jose https://www.udemy.com/course/react-front-to-back-2022/learn/lecture/29768200#questions/16462688
+    setFeedbackEdit({
+      item: {},
+      edit: false,
+    })
   }
 
   // Set item to be updated
