@@ -21,15 +21,16 @@ function FeedbackForm() {
     }
   }, [feedbackEdit])
 
-  /* NOTE: This should be checking input value not state as state won't be the updated value until the next render of the component
-   */
-  // 👈  get the value
-  const handleTextChange = ({ target: { value } }) => {
+  // NOTE: This should be checking input value not state as state won't be the updated value until the next render of the component
+
+  // prettier-ignore
+  const handleTextChange = ({ target: { value } }) => { // 👈  get the value
     if (value === '') {
       setBtnDisabled(true)
       setMessage(null)
-      // 👈 check for less than
-    } else if (value !== '' && value.trim().length < 10) {
+      
+  // prettier-ignore
+    } else if (value !== '' && value.trim().length < 10) { // 👈 check for less than 10
       setMessage('Text must be at least 10 characters')
       setBtnDisabled(true)
     } else {
