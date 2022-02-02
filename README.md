@@ -17,12 +17,12 @@ This project goes over all of the fundamentals of React including...
 
 ---
 
-## This is the bugfix branch of the repository
+## 🐛 This is the bugfix branch of the repository
 
-This branch aims to address the bugs found by students taking the course and
+This branch aims to address the bugs and issues found by students taking the course and
 provides fixes and solutions.
 
-### 🐛 Bugs found so far
+### Issues found so far
 
 - [FeedbackContext.js](src/context/FeedbackContext.js#L62)
   No need to spread data and item as we have the id in the data response from our
