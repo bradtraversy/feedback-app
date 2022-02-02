@@ -1,4 +1,4 @@
-# React Feedback App
+# React Feedback App - Bug Fixes
 
 This is a project from my React Front To Back 2022 course. It allows users to add, update and delete feedback. It uses a mock REST api with json-server.
 
@@ -14,6 +14,38 @@ This project goes over all of the fundamentals of React including...
 - Forms
 - Context API
 - HTTP Requests
+
+---
+
+## This is the bugfix branch of the repository
+
+This branch aims to address the bugs found by students taking the course and
+provides fixes and solutions.
+
+### 🐛 Bugs found so far
+
+- [FeedbackContext.js](src/context/FeedbackContext.js#L62)
+  No need to spread data and item as we have the id in the data response from our
+  json-server.
+- [FeedbackContext.js](src/context/FeedbackContext.js#L65)
+  After editing a feedback it is not possilbe to add a new feedback, we just need
+  to reset the feedbackEdit state.
+- [FeedbackForm.jsx](src/components/FeedbackForm.jsx#24)
+  handleText change should validate on the input value, not on state.
+  State will only have changed on the next render of the component, which
+  happens after we call setText. So our text state is not the current value of
+  the input. Additionally we don't need to check twice for an empty string.
+- [FeedbackForm.jsx](src/components/FeedbackForm.jsx#57)
+  Reset to default state after submitting a feedback.
+- [RatingSelect.jsx](src/components/RatingSelect.js#2)
+  No need for local state, useEffect or consuming context in this component as it's
+  just a duplicate of parent state. Relies on `selected` being passed as prop in [FeedbackForm.jsx](src/components/FeedbackForm.jsx#64)
+- [FeedbackStats.jsx](src/components/FeedbackStats.jsx#7)
+  Simplify average rating calculation without regex.
+- [RatingSelect.jsx](src/components/RatingSelect.jsx#12)
+  Simplify rendering radio buttons with iteration.
+
+---
 
 # Usage
 
