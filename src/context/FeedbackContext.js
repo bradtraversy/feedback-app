@@ -62,6 +62,11 @@ export const FeedbackProvider = ({ children }) => {
     setFeedback(
       feedback.map((item) => (item.id === id ? { ...item, ...data } : item))
     )
+    //resets edit button toggle
+    setFeedbackEdit({
+            item: {},
+            edit: false
+        })
   }
 
   // Set item to be updated
