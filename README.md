@@ -44,6 +44,9 @@ provides fixes and solutions.
   Simplify average rating calculation without regex.
 - [RatingSelect.jsx](src/components/RatingSelect.jsx#L12)
   Simplify rendering radio buttons with iteration.
+- [index.css](src/index.css#L188) The about link icon container was positioned
+  absolute to the container meaning when lots of feedback's were added the icon
+  would appear off to the right and not at the bottom of the page.
 
 ---
 
