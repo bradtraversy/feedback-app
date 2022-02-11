@@ -37,7 +37,7 @@ provides fixes and solutions.
   the input. Additionally we don't need to check twice for an empty string.
 - [FeedbackForm.jsx](src/components/FeedbackForm.jsx#L57)
   Reset to default state after submitting a feedback.
-- [RatingSelect.jsx](src/components/RatingSelect.js#L2)
+- [RatingSelect.jsx](src/components/RatingSelect.jsx#L2)
   No need for local state, useEffect or consuming context in this component as it's
   just a duplicate of parent state. Relies on `selected` being passed as prop in [FeedbackForm.jsx](src/components/FeedbackForm.jsx#L64)
 - [FeedbackStats.jsx](src/components/FeedbackStats.jsx#L7)
