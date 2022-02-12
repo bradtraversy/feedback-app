@@ -192,6 +192,8 @@ input:focus {
   justify-content: flex-end;
 }
 
+/* FIX: Remove position: absolute to keep about icon at the bottom of the
+ * document */
 .about-link a {
   color: #fff;
   cursor: pointer;
