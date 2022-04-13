@@ -59,9 +59,10 @@ Reset sate back to default after adding a new feedback.
 
 > Code changes can be seen in [FeedbackForm.jsx](src/components/FeedbackForm.jsx#L57)
 
-#### No need for local state, useEffect or context in RatingSelect
+#### Q: Why does the default rating of 10 not show?
 
-No need for local state, useEffect or consuming context in this component as it's
+Initially `feedbackEdit.item.rating` is initially undefined, so when RatingSelect first mounts we set local state in our useEffect to undefined, which is why the the default rating of 10 does not show.
+However there is no need for local state, useEffect or consuming context in this component as it's
 just a duplicate of parent state. Relies on `selected` being passed as prop in [FeedbackForm.jsx](src/components/FeedbackForm.jsx#L64)
 
 Additionally here we can simplify our JSX with iteration.
