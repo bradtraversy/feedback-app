@@ -3,7 +3,10 @@ import FeedbackContext from '../context/FeedbackContext'
 
 function FeedbackStats() {
   const { feedback } = useContext(FeedbackContext)
-
+  // Don't show stats when there aren't any ratings
+  if (!feedback || feedback.length === 0) {
+    return
+  }
   // NOTE: simpler average calculation
   // Calculate ratings avg
   const average = Math.round(
