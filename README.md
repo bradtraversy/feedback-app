@@ -69,12 +69,6 @@ Additionally here we can simplify our JSX with iteration.
 
 > Code changes can be seen in [RatingSelect.jsx](src/components/RatingSelect.jsx#L2) and [FeedbackForm.jsx](src/components/FeedbackForm.jsx#L64)
 
-#### Simplify average rating calculation
-
-Simplify average rating calculation without needing regex.
-
-> Code changes can be seen in [FeedbackStats.jsx](src/components/FeedbackStats.jsx#L7)
-
 #### BUG: About link icon shows in the wrong place with many feedback items
 
 The about link icon container was positioned
