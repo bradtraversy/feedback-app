@@ -17,6 +17,19 @@ This project goes over all of the fundamentals of React including...
 
 ---
 
+<!--toc:start-->
+
+- [React Feedback App](#react-feedback-app)
+  - [Bug Fixes, corrections and code FAQ](#bug-fixes-corrections-and-code-faq)
+    - [Q: Why are we spreading data and item?](#q-why-are-we-spreading-data-and-item)
+    - [BUG: After editing a feedback it is not possible to add a feedback](#bug-after-editing-a-feedback-it-is-not-possible-to-add-a-feedback)
+    - [BUG: Validation not working correctly on feedback input](#bug-validation-not-working-correctly-on-feedback-input)
+    - [Q: How do you reset state after submitting a feedback?](#q-how-do-you-reset-state-after-submitting-a-feedback)
+    - [Q: Why does the default rating of 10 not show?](#q-why-does-the-default-rating-of-10-not-show)
+    - [BUG: About link icon shows in the wrong place with many feedback items](#bug-about-link-icon-shows-in-the-wrong-place-with-many-feedback-items)
+- [Usage](#usage) - [Install dependencies](#install-dependencies) - [Run](#run)
+<!--toc:end-->
+
 ### Bug Fixes, corrections and code FAQ
 
 The repository code here on the main branch has been updated due to bugs and issues found by students since the course was released.
